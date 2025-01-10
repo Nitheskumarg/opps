@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Laptop {
+    String name;
+    int rom;
+    int ram;
+    int price;
+
+    // Default constructor (no arguments)
+    Laptop() {
+        // You can optionally initialize default values here if needed.
+    }
+
+    // Parameterized constructor to initialize Laptop object
+    Laptop(String name, int rom, int ram, int price) {
+        this.name = name;
+        this.rom = rom;
+        this.ram = ram;
+        this.price = price;
+    }
+
+    void print() {
+        System.out.print("My laptop name is " + name + 
+                         " with RAM of " + ram + 
+                         "GB and ROM of " + rom + 
+                         "GB, and the price is Rs." + price + ".");
+    }
+
+    public static void main(String[] args) {
+        // Using default constructor and setting values manually
+        Laptop l1 = new Laptop();
+        l1.name = "Apple";
+        l1.rom = 512;
+        l1.ram = 8;
+        l1.price = 100000;
+        l1.print();
+        System.out.println();
+
+        // Using default constructor and setting values manually
+        Laptop l2 = new Laptop();
+        l2.name = "Lenovo";
+        l2.rom = 216;
+        l2.ram = 16;
+        l2.price = 50000;
+        l2.print();
+        System.out.println();
+
+        // Using parameterized constructor
+        Laptop l3 = new Laptop("HP", 200, 3, 60000);
+        l3.print();
+    }
+}
